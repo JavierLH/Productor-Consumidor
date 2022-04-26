@@ -16,9 +16,10 @@ public class Buffer {
     }
     
     public synchronized char consumir(){
-        while(this.estaVacia){
+        if(this.estaVacia){
             try {
                 wait();
+                
                 System.out.println("Esta vacia");
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
@@ -36,8 +37,8 @@ public class Buffer {
         return this.buffer[this.siguiente];
     }
     
-    public synchronized void producir(char c){
-        while(this.estaLlena){
+    public synchronized void producir(){
+        if(this.estaLlena){
             try {
                 wait();
             } catch (InterruptedException ex) {
@@ -45,18 +46,19 @@ public class Buffer {
             }
         }
          
-        buffer[siguiente] = c;
+       // buffer[siguiente] = c;
         siguiente++;
         this.estaVacia = false;
         if(siguiente == this.buffer.length){
             this.estaLlena = true;
+            
         }
         
         notifyAll();
     }
 
 
-    public void mandarPizzaACola(){
-    }
+
+    
     
 }
