@@ -66,5 +66,9 @@ public class Buffer {
 
     }
 
+    public void hola(){
+
+    }
+
     
 }
