@@ -22,9 +22,9 @@ public class Consumidor extends Thread {
         while (true) {
             try {
                 char c = this.buffer.consumir();
-                imprimeC();
+                //imprimeC();
                 System.out.println(c);
-                //System.out.println("Un cliente toma la pizza numero " + c + " de la estanteria");
+                System.out.println("Un cliente toma la pizza numero " + c + " de la estanteria");
 
                 sleep((int) (Math.random() * 4000));
             } catch (InterruptedException ex) {

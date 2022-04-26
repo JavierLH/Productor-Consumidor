@@ -43,7 +43,7 @@ public class Buffer {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+         
         buffer[siguiente] = c;
         siguiente++;
         this.estaVacia = false;
@@ -52,6 +52,11 @@ public class Buffer {
         }
         
         notifyAll();
+    }
+
+
+    public void mandarPizzaACola(){
+        
     }
     
 }

@@ -11,7 +11,7 @@ public class Productor extends Thread {
     public Productor(Buffer b){
         this.buffer = b;
     }
-    
+     
     public void run(){
         while(true){
             try {
