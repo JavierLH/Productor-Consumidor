@@ -1,13 +1,13 @@
 
 
-import static java.lang.Thread.sleep;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Consumidor extends Thread {
 
     private Buffer buffer;
-    private Ventana CV; 
+   
 
     public Consumidor(Buffer b) {
         this.buffer = b;
