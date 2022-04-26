@@ -15,7 +15,7 @@ public class Consumidor extends Thread {
     
     public void imprimeC(){
         //System.out.printf(" %d ", this.area.get(i));
-        System.out.println("Un cliente toma de la estantería la pizza numero: ");
+        System.out.println("Un cliente toma de la estantería la pizza. ");
     }
 
     public void run() {
@@ -23,8 +23,8 @@ public class Consumidor extends Thread {
             try {
                 char c = this.buffer.consumir();
                 //imprimeC();
-                System.out.println(c);
-                System.out.println("Un cliente toma la pizza numero " + c + " de la estanteria");
+                //System.out.println(c);
+                System.out.println("Un cliente toma la pizza de la estanteria");
 
                 sleep((int) (Math.random() * 4000));
             } catch (InterruptedException ex) {

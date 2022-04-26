@@ -10,8 +10,10 @@ public class EjemploProductorConsumidor {
         Buffer b = new Buffer(5);
         Productor p = new Productor(b);
         Consumidor c = new Consumidor(b);
+        //Consumidor c2 = new Consumidor(b);
         
         p.start();
         c.start();
+        //c2.start();
     }
 }

@@ -17,7 +17,7 @@ public class Productor extends Thread {
             try {
                 char c = letras.charAt((int) (Math.random() * letras.length()));
                 buffer.producir(c);
-                System.out.println("Se ingresa una pizza de numero " + c + " a la estanteria ");
+                System.out.println("Se ingresa una pizza a la estanteria ");
                 
                 sleep((int) (Math.random() * 4000));
             } catch (InterruptedException ex) {

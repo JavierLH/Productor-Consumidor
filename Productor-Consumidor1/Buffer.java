@@ -19,6 +19,7 @@ public class Buffer {
         while(this.estaVacia){
             try {
                 wait();
+                System.out.println("Esta vacia");
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
