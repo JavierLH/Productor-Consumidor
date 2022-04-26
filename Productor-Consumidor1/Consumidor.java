@@ -27,6 +27,8 @@ public class Consumidor extends Thread {
                 System.out.println("Un cliente toma la pizza de la estanteria");
                 
                 sleep((int) (Math.random() * 4000));
+
+                sleep(6000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
             }

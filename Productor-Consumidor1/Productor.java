@@ -16,10 +16,13 @@ public class Productor extends Thread {
         while(true){
             try {
                 char c = letras.charAt((int) (Math.random() * letras.length()));
-                    buffer.producir(c);
+                    buffer.producir();
+                //char c = letras.charAt((int) (Math.random() * letras.length()));
+                buffer.producir();
                 System.out.println("Se ingresa una pizza a la estanteria ");
                 
-                sleep((int) (Math.random() * 4000));
+                sleep(1000);
+                
             } catch (InterruptedException ex) {
                 Logger.getLogger(Productor.class.getName()).log(Level.SEVERE, null, ex);
             }
