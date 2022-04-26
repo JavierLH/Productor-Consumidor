@@ -57,7 +57,14 @@ public class Buffer {
 
     public void mandarPizzaACola(){
 
+
+
     }
-    
+
+
+    public void nuevocambio(){
+
+    }
+
     
 }
