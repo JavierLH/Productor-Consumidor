@@ -2,7 +2,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Buffer {
-
+    boolean Vacia = true; 
     private char[] buffer;
     private int siguiente;
     private boolean estaVacia;
@@ -19,7 +19,6 @@ public class Buffer {
         if(this.estaVacia){
             try {
                 wait();
-                
                 System.out.println("Esta vacia");
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
@@ -46,7 +45,7 @@ public class Buffer {
             }
         }
          
-       // buffer[siguiente] = c;
+        //buffer[siguiente] = c;
         siguiente++;
         this.estaVacia = false;
         if(siguiente == this.buffer.length){

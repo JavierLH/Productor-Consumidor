@@ -20,15 +20,13 @@ public class Consumidor extends Thread {
 
     public void run() {
         while (true) {
-            try {
+            try { 
+               
                 char c = this.buffer.consumir();
                 //imprimeC();
                 //System.out.println(c);
                 System.out.println("Un cliente toma la pizza de la estanteria");
-                
-                sleep((int) (Math.random() * 4000));
-
-                sleep(6000);
+                sleep(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
             }
