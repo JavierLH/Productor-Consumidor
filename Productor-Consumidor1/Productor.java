@@ -13,26 +13,23 @@ public class Productor extends Thread {
     }
      
     public void run(){
-        int cont =0;
-        while(true){
-             
+        int contP =0;
+        while(!interrupted()){
             try {
                 char c = letras.charAt((int) (Math.random() * letras.length()));
                     buffer.producir();
-                //char c = letras.charAt((int) (Math.random() * letras.length()));
-                //buffer.producir();
                 System.out.println("Se ingresa una pizza a la estanteria ");
-                //System.out.println(cont); 
                 sleep(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Productor.class.getName()).log(Level.SEVERE, null, ex);
             }
-            cont = cont+1;
-            if(cont == 5){
+            contP = contP+1;
+            if(contP == 5){
                 System.out.println("Estantería llena");
-                EjemploProductorConsumidor.inicio();
+                EjemploProductorConsumidor.despiertaConsumidor();
+                //EjemploProductorConsumidor.p.interrupt();
+                contP = 0;
             } 
         }
-    }
-    
+    }    
 }
